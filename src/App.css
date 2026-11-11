@@ -1,0 +1,567 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f3f6fa;
+  color: #1e293b;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+/* LOGIN PAGE */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  padding: 30px;
+  background: linear-gradient(135deg, #0f172a, #075985);
+}
+
+.login-left {
+  color: white;
+  max-width: 480px;
+}
+
+.login-left h1 {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.login-left h2 {
+  font-size: 25px;
+  margin-bottom: 15px;
+  color: #67e8f9;
+}
+
+.login-left p {
+  line-height: 1.8;
+  color: #dbeafe;
+}
+
+.login-box {
+  background: white;
+  width: 390px;
+  max-width: 100%;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px #0003;
+}
+
+.login-box h2 {
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.login-box > p {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.role-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.role-buttons button {
+  flex: 1;
+  padding: 12px;
+  background: #e2e8f0;
+  border-radius: 8px;
+}
+
+.role-buttons button.active {
+  background: #0284c7;
+  color: white;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.login-box input,
+.report-form input,
+.report-form select,
+.report-form textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  background: white;
+}
+
+.login-box input:focus,
+.report-form input:focus,
+.report-form textarea:focus {
+  border-color: #0284c7;
+}
+
+.login-box form button,
+.report-form button {
+  padding: 13px;
+  border-radius: 8px;
+  background: #0284c7;
+  color: white;
+  font-weight: 600;
+}
+
+.login-box form button:hover,
+.report-form button:hover {
+  background: #0369a1;
+}
+
+.error {
+  color: #dc2626 !important;
+  margin-top: 12px;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.signup-link span {
+  color: #0284c7;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.demo-login {
+  margin-top: 20px;
+  padding: 12px;
+  background: #f1f5f9;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* MAIN LAYOUT */
+
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  width: 255px;
+  min-height: 100vh;
+  background: #0f172a;
+  color: white;
+  padding: 25px 16px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.sidebar h2 {
+  font-size: 19px;
+  margin-bottom: 30px;
+  padding: 5px;
+}
+
+.profile {
+  padding: 15px;
+  background: #1e293b;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.profile small {
+  color: #94a3b8;
+}
+
+.sidebar button {
+  width: 100%;
+  text-align: left;
+  padding: 13px;
+  margin-bottom: 8px;
+  color: #cbd5e1;
+  background: transparent;
+  border-radius: 8px;
+}
+
+.sidebar button:hover,
+.sidebar button.selected {
+  background: #0284c7;
+  color: white;
+}
+
+.sidebar .logout-btn {
+  margin-top: auto;
+  background: #dc2626;
+  color: white;
+  text-align: center;
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  min-width: 0;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.topbar h1 {
+  font-size: 27px;
+  color: #0f172a;
+}
+
+.topbar span {
+  background: #dbeafe;
+  color: #0369a1;
+  padding: 9px 15px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.welcome {
+  background: linear-gradient(120deg, #0369a1, #0e7490);
+  padding: 30px;
+  border-radius: 15px;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.welcome h2 {
+  margin-bottom: 10px;
+}
+
+.welcome p {
+  color: #e0f2fe;
+}
+
+/* STATISTICS */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  background: white;
+  padding: 22px;
+  border-radius: 13px;
+  box-shadow: 0 3px 12px #0000000d;
+  border-left: 4px solid #0284c7;
+}
+
+.stat-card h2 {
+  font-size: 27px;
+}
+
+.stat-card h3 {
+  font-size: 27px;
+  margin: 10px 0;
+  color: #0284c7;
+}
+
+.stat-card p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* CONTENT CARDS */
+
+.content-card {
+  background: white;
+  padding: 25px;
+  border-radius: 13px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 12px #0000000d;
+}
+
+.content-card h2 {
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+/* REPORT ITEMS */
+
+.report-item {
+  border: 1px solid #e2e8f0;
+  padding: 18px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow-wrap: anywhere;
+}
+
+.report-item h3 {
+  color: #0369a1;
+  margin-bottom: 10px;
+}
+
+.report-item p {
+  margin: 8px 0;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.report-item select {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  margin: 10px 10px 10px 0;
+  background: white;
+}
+
+/* DELETE BUTTON */
+
+.delete-btn {
+  background: #dc2626;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 7px;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.delete-btn:hover {
+  background: #991b1b;
+}
+
+/* REPORT FORM */
+
+.report-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.report-form label {
+  font-weight: 600;
+  margin-top: 8px;
+  color: #334155;
+}
+
+.report-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* REPORT IMAGE */
+
+.report-image {
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 12px 0;
+}
+
+/* RESOURCES */
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.resource-card {
+  padding: 22px;
+  background: #f1f5f9;
+  border-radius: 12px;
+  border-bottom: 4px solid #0284c7;
+}
+
+.resource-card h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.resource-card h3 {
+  margin-bottom: 10px;
+  color: #0369a1;
+}
+
+.resource-card p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* ALERTS */
+
+.alert-item {
+  padding: 18px;
+  margin-bottom: 15px;
+  background: #fff7ed;
+  border-left: 5px solid #f97316;
+  border-radius: 8px;
+}
+
+.alert-item h3 {
+  margin-bottom: 8px;
+  color: #9a3412;
+}
+
+.alert-item p {
+  color: #475569;
+}
+
+/* CONTACTS */
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #f1f5f9;
+  padding: 18px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.contact-item h3 {
+  min-width: 65px;
+  color: #0284c7;
+  font-size: 22px;
+}
+
+.contact-item p {
+  color: #475569;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1000px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resource-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .login-page {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  .login-page {
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+  }
+
+  .login-left {
+    text-align: center;
+  }
+
+  .login-left h1 {
+    font-size: 27px;
+  }
+
+  .login-left h2 {
+    font-size: 20px;
+  }
+
+  .login-box {
+    width: 100%;
+    max-width: 420px;
+    padding: 25px;
+  }
+
+  .app-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .sidebar h2 {
+    margin-bottom: 15px;
+  }
+
+  .profile {
+    margin-bottom: 12px;
+  }
+
+  .sidebar button {
+    width: auto;
+    display: inline-block;
+    margin: 3px;
+    padding: 10px;
+  }
+
+  .sidebar .logout-btn {
+    margin-top: 10px;
+  }
+
+  .main-content {
+    padding: 18px;
+  }
+
+  .topbar h1 {
+    font-size: 21px;
+  }
+
+  .stats-grid,
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome {
+    padding: 22px;
+  }
+
+  .content-card {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .contact-item {
+    gap: 10px;
+  }
+
+  .contact-item h3 {
+    min-width: 55px;
+    font-size: 19px;
+  }
+}
